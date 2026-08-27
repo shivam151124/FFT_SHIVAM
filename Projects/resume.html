@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Doe — Resume</title>
+<style>
+  :root{
+    --ink:#1c2430;
+    --muted:#5a6472;
+    --line:#dfe3e8;
+    --accent:#2f5d8a;
+    --accent-soft:#eaf1f8;
+    --bg:#ffffff;
+    --page-max:800px;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:#f4f6f8;
+    margin:0;
+    padding:32px 16px;
+    line-height:1.55;
+  }
+
+  .resume{
+    max-width:var(--page-max);
+    margin:0 auto;
+    background:var(--bg);
+    padding:48px 56px;
+    border-radius:6px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+  }
+
+  header.identity{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    border-bottom:3px solid var(--accent);
+    padding-bottom:16px;
+    margin-bottom:28px;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  header.identity h1{
+    margin:0;
+    font-size:2rem;
+    letter-spacing:0.5px;
+    color:var(--ink);
+  }
+
+  header.identity .role{
+    margin:4px 0 0;
+    color:var(--accent);
+    font-weight:600;
+    font-size:1rem;
+  }
+
+  address{
+    font-style:normal;
+    text-align:right;
+    font-size:0.9rem;
+    color:var(--muted);
+    line-height:1.7;
+  }
+
+  address a{ color:var(--muted); text-decoration:none; }
+  address a:hover{ color:var(--accent); }
+
+  section{ margin-bottom:30px; }
+
+  section > h2{
+    font-size:0.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 14px;
+    padding-bottom:6px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .objective{ color:var(--ink); margin:0; }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.92rem;
+  }
+
+  caption{
+    text-align:left;
+    font-size:0.8rem;
+    color:var(--muted);
+    margin-bottom:6px;
+  }
+
+  th, td{
+    padding:9px 10px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+
+  thead th{
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-weight:600;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+  }
+
+  tbody tr:hover{ background:#fafbfc; }
+
+  ul.skills{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:0;
+    padding:0;
+  }
+
+  ul.skills li{
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:0.88rem;
+    font-weight:600;
+  }
+
+  .card{
+    padding:14px 16px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    margin-bottom:12px;
+  }
+  .card:last-child{ margin-bottom:0; }
+
+  .card h3{
+    margin:0 0 4px;
+    font-size:1rem;
+    color:var(--ink);
+  }
+
+  .card p{ margin:0; color:var(--muted); font-size:0.92rem; }
+
+  .job-meta{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:4px 12px;
+    margin-bottom:4px;
+  }
+
+  .job-meta h3{ margin:0; font-size:1rem; }
+
+  .job-meta time{
+    font-size:0.85rem;
+    color:var(--muted);
+    font-weight:600;
+    white-space:nowrap;
+  }
+
+  .position{
+    font-weight:600;
+    color:var(--accent);
+    font-size:0.92rem;
+    margin:0 0 4px;
+  }
+
+  footer.signoff{
+    margin-top:36px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    font-size:0.9rem;
+    color:var(--muted);
+  }
+
+  footer.signoff div{ min-width:160px; }
+  footer.signoff .fill-line{
+    display:inline-block;
+    min-width:140px;
+    border-bottom:1px solid var(--muted);
+    margin-left:6px;
+  }
+
+  @media print{
+    body{ background:#fff; padding:0; }
+    .resume{ box-shadow:none; padding:0 8px; }
+  }
+
+  @media (max-width:600px){
+    .resume{ padding:28px 20px; }
+    header.identity{ flex-direction:column; align-items:flex-start; }
+    address{ text-align:left; }
+    .job-meta{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+<main class="resume">
+
+  <header class="identity">
+    <div>
+      <h1>Behera Shivam Ganesh</h1>
+      <p class="role">Programming Faculty &amp; Trainer</p>
+    </div>
+    <address>
+      <a href="mailto:shivambehera12@gmail.com">shivambehera12@gmail.com</a><br>
+      <a href="tel:+91 8591292793">+91 8591292793</a>
+    </address>
+  </header>
+
+  <section aria-labelledby="objective-h">
+    <h2 id="objective-h">Objective</h2>
+    <p class="objective">
+      Dedicated programming educator and developer seeking a role where I can apply my
+      technical skills and training experience to contribute meaningfully to an
+      organization's growth and success.
+    </p>
+  </section>
+
+  <section aria-labelledby="education-h">
+    <h2 id="education-h">Education &amp; Qualifications</h2>
+    <table>
+      <caption>Academic record, most recent first</caption>
+      <thead>
+        <tr>
+          <th scope="col">Institution</th>
+          <th scope="col">Course</th>
+          <th scope="col">Result</th>
+          <th scope="col">Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>XYZ University</td><td>Ph.D.</td><td>88%</td><td>2026</td></tr>
+        <tr><td>GHI University</td><td>M.Tech</td><td>85%</td><td>2025</td></tr>
+        <tr><td>STU University</td><td>MBA</td><td>83%</td><td>2025</td></tr>
+        <tr><td>DEF College</td><td>B.Tech</td><td>82%</td><td>2023</td></tr>
+        <tr><td>XYZ College</td><td>BCA</td><td>80%</td><td>2023</td></tr>
+        <tr><td>PQR College</td><td>BBA</td><td>79%</td><td>2023</td></tr>
+        <tr><td>ABC University</td><td>MCA</td><td>78%</td><td>2024</td></tr>
+        <tr><td>MNO University</td><td>M.Com</td><td>76%</td><td>2024</td></tr>
+        <tr><td>ABC College</td><td>B.Sc</td><td>75%</td><td>2022</td></tr>
+        <tr><td>JKL College</td><td>B.Com</td><td>72%</td><td>2022</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Java</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="experience-h">
+    <h2 id="experience-h">Work Experience</h2>
+
+    <article class="card">
+      <div class="job-meta">
+        <h3>ICIT Computer Institute</h3>
+        <time>Apr 2023 – Apr 2025</time>
+      </div>
+      <p class="position">Head of Programming Faculty</p>
+    </article>
+
+    <article class="card">
+      <div class="job-meta">
+        <h3>Starx Innovations and IT Solutions</h3>
+        <time>Nov 2024 – Jun 2025</time>
+      </div>
+      <p class="position">Programming Trainer</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="projects-h">
+    <h2 id="projects-h">Projects</h2>
+
+    <article class="card">
+      <h3>Portfolio Website</h3>
+      <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase skills and projects.</p>
+    </article>
+
+    <article class="card">
+      <h3>E-commerce Website</h3>
+      <p>Built a fully functional e-commerce website using Django with an integrated payment gateway for online transactions.</p>
+    </article>
+
+    <article class="card">
+      <h3>Chat Application</h3>
+      <p>Developed a real-time chat application using Python and WebSocket for instant messaging.</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="certifications-h">
+    <h2 id="certifications-h">Certifications</h2>
+
+    <article class="card">
+      <h3>Web Development</h3>
+      <p>ICIT Computer Institute</p>
+    </article>
+
+    <article class="card">
+      <h3>Android Development Internship</h3>
+      <p>Starx Innovations and IT Solutions</p>
+    </article>
+  </section>
+
+  <footer class="signoff">
+    <div>Date:<span class="fill-line"></span></div>
+    <div>Place:<span class="fill-line"></span></div>
+    <div>Signature:<span class="fill-line"></span></div>
+  </footer>
+
+</main>
+</body>
+</html>

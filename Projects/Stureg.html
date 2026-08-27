@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <div class="heading">
+                <h1>Student Registration Form</h1>
+                <p>Please enter your details carefully</p>
+            </div>
+
+            <form action="https://www.facebook.com/" method="post" >
+
+                <!-- Student Information -->
+
+                <div class="section-title">
+                    Student Information
+                </div>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>
+                            Registration ID <span>*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            name="reg_id"
+                            placeholder="Enter Registration ID"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>
+                            Full Name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter Full Name"
+                            minlength="3"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>
+                            Gender <span>*</span>
+                        </label>
+
+                        <select name="gender" required>
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="male">
+                                Male
+                            </option>
+
+                            <option value="female">
+                                Female
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label>
+                            Date of Birth <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            name="dob"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Information -->
+
+                <div class="section-title">
+                    Contact Information
+                </div>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label>
+                            Email <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="example@gmail.com"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label>
+                            Phone Number <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="10 digit mobile number"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Academic Information -->
+
+                <div class="section-title">
+                    Academic Information
+                </div>
+
+                <div class="row">
+
+                    <div class="field">
+
+                        <label>
+                            Department <span>*</span>
+                        </label>
+
+                        <select name="department" required>
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            <option>
+                                Computer Science
+                            </option>
+
+                            <option>
+                                Information Technology
+                            </option>
+
+                            <option>
+                                Management
+                            </option>
+
+                            <option>
+                                Commerce
+                            </option>
+
+                            <option>
+                                Engineering
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Course <span>*</span>
+                        </label>
+
+                        <select name="course" required>
+
+                            <option value="">
+                                Select Course
+                            </option>
+
+                            <option>BCA</option>
+                            <option>B.Sc IT</option>
+                            <option>BBA</option>
+                            <option>B.Com</option>
+                            <option>MCA</option>
+                            <option>MBA</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="field">
+
+                        <label>
+                            Section <span>*</span>
+                        </label>
+
+                        <select name="section" required>
+
+                            <option value="">
+                                Select Section
+                            </option>
+
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            College Name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="college"
+                            placeholder="Enter College Name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Address -->
+
+                <div class="section-title">
+                    Address Details
+                </div>
+
+                <div class="field">
+
+                    <label>
+                        Address <span>*</span>
+                    </label>
+
+                    <textarea
+                        name="address"
+                        placeholder="Enter your complete address"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Resume -->
+
+                <div class="section-title">
+                    Resume / Document
+                </div>
+
+                <div class="field">
+
+                    <label>
+                        Upload Resume
+                    </label>
+
+                    <input
+                        type="file"
+                        name="resume"
+                        accept=".pdf,.doc,.docx"
+                    >
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="buttons">
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Submit
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="reset-btn"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
